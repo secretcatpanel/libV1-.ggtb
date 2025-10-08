@@ -1,0 +1,11 @@
+local StarterGui = game:GetService("StarterGui")
+function Notify(title, text, duration)
+	duration = duration or 3
+	pcall(function()
+		StarterGui:SetCore("SendNotification", {
+			Title = tostring(title);
+			Text = tostring(text);
+			Duration = duration;
+		})
+	end)
+end
